@@ -38,6 +38,15 @@ describe('The Home Page', function() {
       });
     });
 
+    describe('left', function() {
+      it('should navigate to about page', function() {
+        spyOn(window.App, 'navigate');
+        homePage.setButtonEvents();
+        window.App.vent.trigger('left');
+        expect(window.App.navigate).toHaveBeenCalledWith('about');
+      });
+    });
+
   });
 
   describe('rendering', function() {
