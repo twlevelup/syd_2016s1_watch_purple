@@ -37,6 +37,7 @@ describe('The Home Page', function() {
         eventHub.trigger('bottom');
         expect(window.App.navigate).toHaveBeenCalledWith('id');
       });
+
     });
 
     describe('left', function() {
@@ -61,10 +62,11 @@ describe('The Home Page', function() {
 
   describe('rendering', function() {
 
+    it('should display the homepage menu');
+
     it('returns the view object', function() {
       expect(homePage.render()).toEqual(homePage);
     });
-
   });
 
 });

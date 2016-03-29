@@ -1,0 +1,17 @@
+#servicesuserlist{
+  /*border-style: solid;*/
+  text-align: center;
+/*  background-color:black;*/
+
+}
+#serviceslist{
+  /*border-style: solid;*/
+  text-align: center;
+/*  background-color:black;*/
+
+}
+div.list{
+    border-style: solid ;
+    border-color: rgb(250,0,255);
+    font-size: 18px;
+}

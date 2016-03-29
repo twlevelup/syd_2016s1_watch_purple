@@ -21,12 +21,10 @@ var HomeScreen = PageView.extend({
   },
 
   goToServices: function() {
-    //$('#watch-face').animate({scrollTop: '-=70px'}); //old scroll code
     window.App.navigate('services');
   },
 
   goToID: function() {
-    //$('#watch-face').animate({scrollTop: '+=70px'}); //old scroll code
     window.App.navigate('id');
   },
 

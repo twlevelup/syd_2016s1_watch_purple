@@ -2,18 +2,18 @@
 
 var PageView = require('../framework/page');
 
-var HomeScreen = PageView.extend({
+var ServicesScreen = PageView.extend({
 
   id: 'services',
 
   template: require('../../templates/pages/services.hbs'),
 
   buttonEvents: {
-    left: 'goToHome'
+    left: 'goToServicesList'
   },
 
-  goToHome: function() {
-    window.App.navigate('');
+  goToServicesList: function() {
+    window.App.navigate('serviceslist');
   },
 
   render: function() {
@@ -23,4 +23,4 @@ var HomeScreen = PageView.extend({
 
 });
 
-module.exports = new HomeScreen();
+module.exports = new ServicesScreen();

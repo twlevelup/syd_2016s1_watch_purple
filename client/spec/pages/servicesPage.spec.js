@@ -7,16 +7,16 @@ var servicesPage = require('../../src/js/pages/servicesPage'),
 
 window.App = App;
 
-describe('The services Page', function() {
+describe('The Services Page', function() {
 
   describe('button event handlers', function() {
 
     describe('left', function() {
-      it('should navigate to home page', function() {
+      it('should take the user to the serviceslist page', function() {
         spyOn(window.App, 'navigate');
         servicesPage.configureButtons();
         eventHub.trigger('left');
-        expect(window.App.navigate).toHaveBeenCalledWith('');
+        expect(window.App.navigate).toHaveBeenCalledWith('serviceslist');
       });
     });
 
@@ -28,6 +28,10 @@ describe('The services Page', function() {
       expect(servicesPage.render()).toEqual(servicesPage);
     });
 
+    it('should produce the correct HTML', function() {
+      servicesPage.render();
+      expect(servicesPage.$el).toContainHtml('MEDICARE');
+    });
   });
 
 });
