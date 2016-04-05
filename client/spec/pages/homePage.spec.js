@@ -2,7 +2,8 @@
 
 var homePage = require('../../src/js/pages/homePage'),
   Router = require('../../src/js/framework/router'),
-  App = require('../../src/js/app');
+  App = require('../../src/js/app'),
+  eventHub = require('../../src/js/framework/eventHub');
 
 window.App = App;
 
@@ -12,49 +13,44 @@ describe('The Home Page', function() {
 
     describe('right', function() {
 
-      it('should take the user to the contacts page', function() {
+      it('should take the user to the friends page', function() {
         spyOn(window.App, 'navigate');
         homePage.configureButtons();
-        window.App.vent.trigger('right');
-        expect(window.App.navigate).toHaveBeenCalledWith('contacts');
+        eventHub.trigger('right');
+        expect(window.App.navigate).toHaveBeenCalledWith('friends');
       });
     });
 
     describe('top', function() {
-      it('should scroll the watch face up', function() {
-        spyOn(homePage, 'scrollUp');
+      it('should take the user to the services page', function() {
+        spyOn(window.App, 'navigate');
         homePage.configureButtons();
-        window.App.vent.trigger('top');
-        expect(homePage.scrollUp).toHaveBeenCalled();
+        eventHub.trigger('top');
+        expect(window.App.navigate).toHaveBeenCalledWith('services');
       });
     });
 
     describe('bottom', function() {
-      it('should scroll the watch face down', function() {
-        spyOn(homePage, 'scrollDown');
+      it('should take the user to the id page', function() {
+        spyOn(window.App, 'navigate');
         homePage.configureButtons();
-        window.App.vent.trigger('bottom');
-        expect(homePage.scrollDown).toHaveBeenCalled();
+        eventHub.trigger('bottom');
+        expect(window.App.navigate).toHaveBeenCalledWith('id');
       });
     });
 
     describe('left', function() {
-      it('should navigate to about page', function() {
+      it('should navigate to events page', function() {
         spyOn(window.App, 'navigate');
         homePage.configureButtons();
-        window.App.vent.trigger('left');
-        expect(window.App.navigate).toHaveBeenCalledWith('about');
+        eventHub.trigger('left');
+        expect(window.App.navigate).toHaveBeenCalledWith('events');
       });
     });
 
   });
 
   describe('rendering', function() {
-
-    it('should produce the correct HTML', function() {
-      homePage.render();
-      expect(homePage.$el).toContainText('Hello, World!');
-    });
 
     it('returns the view object', function() {
       expect(homePage.render()).toEqual(homePage);

@@ -9,26 +9,28 @@ var HomeScreen = PageView.extend({
   template: require('../../templates/pages/home.hbs'),
 
   buttonEvents: {
-    right: 'goToContacts',
-    top: 'scrollUp',
-    bottom: 'scrollDown',
-    left: 'goToAbout'
+    right: 'goToFriends',
+    top: 'goToServices',
+    bottom: 'goToID',
+    left: 'goToEvents'
   },
 
-  goToContacts: function() {
-    window.App.navigate('contacts');
+  goToFriends: function() {
+    window.App.navigate('friends');
   },
 
-  scrollUp: function() {
-    $('#watch-face').animate({scrollTop: '-=70px'});
+  goToServices: function() {
+    //$('#watch-face').animate({scrollTop: '-=70px'}); //old scroll code
+    window.App.navigate('services');
   },
 
-  scrollDown: function() {
-    $('#watch-face').animate({scrollTop: '+=70px'});
+  goToID: function() {
+    //$('#watch-face').animate({scrollTop: '+=70px'}); //old scroll code
+    window.App.navigate('id');
   },
 
-  goToAbout: function() {
-    window.App.navigate('about');
+  goToEvents: function() {
+    window.App.navigate('events');
   },
 
   render: function() {

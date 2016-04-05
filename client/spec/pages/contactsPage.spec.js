@@ -46,10 +46,10 @@ describe('The Contacts Page', function() {
 
   describe('rendering', function() {
 
-    it('should produce the correct HTML', function() {
+    /*it('should produce the correct HTML', function() {
       contactsPage.render();
       expect(contactsPage.$el).toContainHtml('<h1>Contacts</h1>');
-    });
+    });*/
 
     it('should render each of the contacts', function() {
       spyOn(contactsPage, 'createContactHTML');
