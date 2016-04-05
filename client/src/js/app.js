@@ -1,6 +1,6 @@
 'use strict';
 
-var Router = require('./framework/router'),
+var Router = require('./router'),
   WatchFace = require('./framework/watchFace'),
   eventHub = require('./framework/eventHub'),
   pages = require('./pages'),
@@ -15,16 +15,21 @@ function App() {
   this.notificationHandler = new WatchNotificationHandler(notifications);
 }
 
+// TODO move to router?
 App.prototype.navigate = function (route) {
   this.router.navigate(route, true);
 };
 
-App.prototype.showPage = function(page) {
+// TODO move to router?
+App.prototype.showPage = function(page, options) {
   if (this.activePage) {
     this.activePage.remove();
   }
 
   this.notificationHandler.hideNotification();
+
+  // FIXME nasty hack because we're not creating a new instance of the view
+  page.options = options;
 
   this.activePage = page;
 
