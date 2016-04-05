@@ -11,5 +11,8 @@ module.exports = {
   events: require('./eventsPage'),
   eventsList: require('./eventsList'),
   eventDetails: require('./eventDetails'),
-  about: require('./aboutPage')
+  about: require('./aboutPage'),
+  friendsSelection: require('./friendsSelectionPage'),
+  friendDetails: require('./friendDetailsPage'),
+  friendRequest: require('./friendRequestPage')
 };
