@@ -17,7 +17,7 @@ describe('The Home Page', function() {
         spyOn(window.App, 'navigate');
         homePage.configureButtons();
         eventHub.trigger('right');
-        expect(window.App.navigate).toHaveBeenCalledWith('friends');
+        expect(window.App.navigate).toHaveBeenCalledWith('friendsSelection');
       });
     });
 

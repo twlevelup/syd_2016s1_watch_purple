@@ -10,7 +10,7 @@ describe('The Friend Details Page', function() {
     describe('right', function() {
       it('should take the user to the friend request page', function() {
         spyOn(window.App, 'navigate');
-        friendDetailsPage.setButtonEvents();
+        friendDetailsPage.configureButtons();
         eventHub.trigger('right');
         expect(window.App.navigate).toHaveBeenCalledWith('friendRequest');
       });
@@ -19,7 +19,7 @@ describe('The Friend Details Page', function() {
     describe('left', function() {
       it('should navigate to friend selection page', function() {
         spyOn(window.App, 'navigate');
-        friendDetailsPage.setButtonEvents();
+        friendDetailsPage.configureButtons();
         eventHub.trigger('left');
         expect(window.App.navigate).toHaveBeenCalledWith('friendsSelection');
       });

@@ -16,7 +16,7 @@ var HomeScreen = PageView.extend({
   },
 
   goToFriends: function() {
-    window.App.navigate('friends');
+    window.App.navigate('friendsSelection');
   },
 
   goToServices: function() {
