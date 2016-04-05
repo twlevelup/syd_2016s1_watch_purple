@@ -11,7 +11,8 @@ var HomeScreen = PageView.extend({
   buttonEvents: {
     right: 'goToContacts',
     top: 'scrollUp',
-    bottom: 'scrollDown'
+    bottom: 'scrollDown',
+    left: 'goToAbout'
   },
 
   goToContacts: function() {
@@ -24,6 +25,10 @@ var HomeScreen = PageView.extend({
 
   scrollDown: function() {
     $('#watch-face').animate({scrollTop: '+=70px'});
+  },
+
+  goToAbout: function() {
+    window.App.navigate('about');
   },
 
   render: function() {
