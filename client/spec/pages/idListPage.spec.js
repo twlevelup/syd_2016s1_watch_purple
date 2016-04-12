@@ -1,31 +1,31 @@
 'use strict';
 
-var serviceslistPage = require('../../src/js/pages/serviceslistPage'),
+var IdListPage = require('../../src/js/pages/idListPage'),
   Router = require('../../src/js/framework/router'),
   App = require('../../src/js/app'),
   eventHub = require('../../src/js/framework/eventHub');
 
 window.App = App;
 
-describe('The Services list Page', function() {
+describe('The id list Page', function() {
 
   describe('button event handlers', function() {
 
     describe('right', function() {
-      it('should take the user to the service page', function() {
+      it('should take the user to the id details page', function() {
         spyOn(window.App, 'navigate');
-        serviceslistPage.configureButtons();
+        IdListPage.configureButtons();
         eventHub.trigger('right');
-        expect(window.App.navigate).toHaveBeenCalledWith('services');
+        expect(window.App.navigate).toHaveBeenCalledWith('idDetails');
       });
     });
 
     describe('left', function() {
-      it('should take the user to the servicesuserlist page', function() {
+      it('should take the user to the id user list page', function() {
         spyOn(window.App, 'navigate');
-        serviceslistPage.configureButtons();
+        IdListPage.configureButtons();
         eventHub.trigger('left');
-        expect(window.App.navigate).toHaveBeenCalledWith('servicesuserlist');
+        expect(window.App.navigate).toHaveBeenCalledWith('idUserList');
       });
     });
 
@@ -34,8 +34,8 @@ describe('The Services list Page', function() {
 
   describe('rendering', function() {
     it('should produce the correct HTML', function() {
-      serviceslistPage.render();
-      expect(serviceslistPage.$el).toContainHtml('Services List');
+      IdListPage.render();
+      expect(IdListPage.$el).toContainHtml('Services List');
     });
   });
 

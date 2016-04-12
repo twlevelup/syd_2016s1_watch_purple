@@ -5,6 +5,7 @@
 var Router = Backbone.Router.extend({
 
   routes: {
+    'idList/:id': 'showIdDetails',
     'eventDetails/:id': 'showEventDetails',
     '*other': 'defaultRoute',
   },

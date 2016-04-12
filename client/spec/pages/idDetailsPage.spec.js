@@ -1,22 +1,22 @@
 'use strict';
 
-var servicesPage = require('../../src/js/pages/servicesPage'),
+var idDetailsPage = require('../../src/js/pages/idDetailsPage'),
   Router = require('../../src/js/framework/router'),
   App = require('../../src/js/app'),
   eventHub = require('../../src/js/framework/eventHub');
 
 window.App = App;
 
-describe('The Services Page', function() {
+describe('The Id Details Page', function() {
 
   describe('button event handlers', function() {
 
     describe('left', function() {
-      it('should take the user to the serviceslist page', function() {
+      it('should take the user to the id list page', function() {
         spyOn(window.App, 'navigate');
-        servicesPage.configureButtons();
+        idDetailsPage.configureButtons();
         eventHub.trigger('left');
-        expect(window.App.navigate).toHaveBeenCalledWith('serviceslist');
+        expect(window.App.navigate).toHaveBeenCalledWith('idList');
       });
     });
 
@@ -25,12 +25,12 @@ describe('The Services Page', function() {
   describe('rendering', function() {
 
     it('returns the view object', function() {
-      expect(servicesPage.render()).toEqual(servicesPage);
+      expect(idDetailsPage.render()).toEqual(idDetailsPage);
     });
 
     it('should produce the correct HTML', function() {
-      servicesPage.render();
-      expect(servicesPage.$el).toContainHtml('MEDICARE');
+      idDetailsPage.render();
+      expect(idDetailsPage.$el).toContainHtml('MEDICARE');
     });
   });
 

@@ -31,11 +31,12 @@ describe('The Home Page', function() {
     });
 
     describe('bottom', function() {
-      it('should take the user to the id page', function() {
+
+      it('should take the user to the id userlist page', function() {
         spyOn(window.App, 'navigate');
         homePage.configureButtons();
         eventHub.trigger('bottom');
-        expect(window.App.navigate).toHaveBeenCalledWith('id');
+        expect(window.App.navigate).toHaveBeenCalledWith('idUserList');
       });
 
     });
