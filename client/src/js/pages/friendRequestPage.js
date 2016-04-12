@@ -10,7 +10,8 @@ var FriendRequestScreen = PageView.extend({
 
   buttonEvents: {
     right: 'goToHomePage',
-    left: 'goToFriendDetailsPage'
+    left: 'goToFriendDetailsPage',
+    face: 'goToHomePage'
   },
 
   goToHomePage: function() {
