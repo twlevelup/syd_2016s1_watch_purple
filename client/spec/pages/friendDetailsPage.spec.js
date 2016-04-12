@@ -25,6 +25,15 @@ describe('The Friend Details Page', function() {
       });
     });
 
+    describe('face', function() {
+      it('should navigate to home page', function() {
+        spyOn(window.App, 'navigate');
+        friendDetailsPage.configureButtons();
+        eventHub.trigger('face');
+        expect(window.App.navigate).toHaveBeenCalledWith('');
+      });
+    });
+
   });
 
   describe('rendering', function() {
