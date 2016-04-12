@@ -59,7 +59,7 @@ describe('The Event details page', function() {
 
     var eventData = new Backbone.Model({
       name: 'event name',
-      description: 'description'
+      location: 'location'
     });
 
     beforeEach(function() {
@@ -68,12 +68,12 @@ describe('The Event details page', function() {
 
     it('should have the correct title', function() {
       page.render();
-      expect(page.$el).toContainHtml('<h1>event name</h1>');
+      expect(page.$el).toContainHtml('event name');
     });
 
     it('should have the correct event description', function() {
       page.render();
-      expect(page.$el).toContainHtml('<p>description</p>');
+      expect(page.$el).toContainHtml('location');
     });
 
     it('returns the view object', function() {

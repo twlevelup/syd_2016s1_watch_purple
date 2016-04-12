@@ -44,7 +44,7 @@ describe('The Home Page', function() {
         spyOn(window.App, 'navigate');
         homePage.configureButtons();
         eventHub.trigger('left');
-        expect(window.App.navigate).toHaveBeenCalledWith('events');
+        expect(window.App.navigate).toHaveBeenCalledWith('eventsList');
       });
     });
 

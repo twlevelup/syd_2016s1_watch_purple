@@ -30,7 +30,7 @@ var HomeScreen = PageView.extend({
   },
 
   goToEvents: function() {
-    window.App.navigate('events');
+    window.App.navigate('eventsList');
   },
 
   render: function() {
