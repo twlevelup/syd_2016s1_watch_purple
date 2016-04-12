@@ -12,7 +12,8 @@ var HomeScreen = PageView.extend({
     right: 'goToFriends',
     top: 'goToServices',
     bottom: 'goToIdUserlist',
-    left: 'goToEvents'
+    left: 'goToEvents',
+    face: 'goToMe'
   },
 
   goToFriends: function() {
