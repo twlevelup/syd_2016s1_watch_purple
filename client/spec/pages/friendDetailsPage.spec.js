@@ -31,7 +31,7 @@ describe('The Friend Details Page', function() {
 
     it('should produce the correct HTML', function() {
       friendDetailsPage.render();
-      expect(friendDetailsPage.$el).toContainText('MEET UP!');
+      expect(friendDetailsPage.$el).toContainText('MEET UP');
     });
 
   });
