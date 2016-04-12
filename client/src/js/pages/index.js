@@ -5,11 +5,14 @@ module.exports = {
   404: require('./404Page'),
   home: require('./homePage'),
   contacts: require('./contactsPage'),
-  friends: require('./friendsPage'),
   services: require('./servicesPage'),
   id: require('./idPage'),
   events: require('./eventsPage'),
   eventsList: require('./eventsList'),
   eventDetails: require('./eventDetails'),
-  about: require('./aboutPage')
+  about: require('./aboutPage'),
+  friendsSelection: require('./friendsSelectionPage'),
+  friendDetails: require('./friendDetailsPage'),
+  friendRequest: require('./friendRequestPage'),
+  me: require('./mePage')
 };

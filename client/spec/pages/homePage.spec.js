@@ -17,7 +17,7 @@ describe('The Home Page', function() {
         spyOn(window.App, 'navigate');
         homePage.configureButtons();
         eventHub.trigger('right');
-        expect(window.App.navigate).toHaveBeenCalledWith('friends');
+        expect(window.App.navigate).toHaveBeenCalledWith('friendsSelection');
       });
     });
 
@@ -45,6 +45,15 @@ describe('The Home Page', function() {
         homePage.configureButtons();
         eventHub.trigger('left');
         expect(window.App.navigate).toHaveBeenCalledWith('eventsList');
+      });
+    });
+
+    describe('face', function() {
+      it('should navigate to me page', function() {
+        spyOn(window.App, 'navigate');
+        homePage.configureButtons();
+        eventHub.trigger('face');
+        expect(window.App.navigate).toHaveBeenCalledWith('me');
       });
     });
 

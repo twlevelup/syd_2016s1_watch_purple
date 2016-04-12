@@ -11,11 +11,12 @@
   top: 30px;
   left: 20px;
   display: block;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 #watch{
-  background-color: #00F;
+  background-color: crimson;
   display: inline-block;
   vertical-align: top;
 }

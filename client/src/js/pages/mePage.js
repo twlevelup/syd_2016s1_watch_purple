@@ -2,14 +2,15 @@
 
 var PageView = require('../framework/page');
 
-var HomeScreen = PageView.extend({
+var MePage = PageView.extend({
 
-  id: 'friends',
+  id: 'me',
 
-  template: require('../../templates/pages/friends.hbs'),
+  template: require('../../templates/pages/me.hbs'),
 
   buttonEvents: {
-    left: 'goToHome'
+    left: 'goToHome',
+    face: 'goToHome'
   },
 
   goToHome: function() {
@@ -23,4 +24,4 @@ var HomeScreen = PageView.extend({
 
 });
 
-module.exports = new HomeScreen();
+module.exports = new MePage();

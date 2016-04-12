@@ -12,11 +12,12 @@ var HomeScreen = PageView.extend({
     right: 'goToFriends',
     top: 'goToServices',
     bottom: 'goToID',
-    left: 'goToEvents'
+    left: 'goToEvents',
+    face: 'goToMe'
   },
 
   goToFriends: function() {
-    window.App.navigate('friends');
+    window.App.navigate('friendsSelection');
   },
 
   goToServices: function() {
@@ -31,6 +32,10 @@ var HomeScreen = PageView.extend({
 
   goToEvents: function() {
     window.App.navigate('eventsList');
+  },
+
+  goToMe: function() {
+    window.App.navigate('me');
   },
 
   render: function() {
