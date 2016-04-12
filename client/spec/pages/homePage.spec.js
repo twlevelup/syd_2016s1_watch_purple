@@ -48,6 +48,15 @@ describe('The Home Page', function() {
       });
     });
 
+    describe('face', function() {
+      it('should navigate to me page', function() {
+        spyOn(window.App, 'navigate');
+        homePage.configureButtons();
+        eventHub.trigger('face');
+        expect(window.App.navigate).toHaveBeenCalledWith('me');
+      });
+    });
+
   });
 
   describe('rendering', function() {

@@ -13,5 +13,6 @@ module.exports = {
   about: require('./aboutPage'),
   friendsSelection: require('./friendsSelectionPage'),
   friendDetails: require('./friendDetailsPage'),
-  friendRequest: require('./friendRequestPage')
+  friendRequest: require('./friendRequestPage'),
+  me: require('./mePage')
 };
