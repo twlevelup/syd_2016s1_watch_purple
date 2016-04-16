@@ -26,8 +26,13 @@ var notificationsConfig = [
       label:'Meeting Confirmed',
       notificationType:'meetConfirmed',
       defaultValue:''
-    }
+    },
 
+    {
+      label:'Meeting Denied',
+      notificationType:'meetRejected',
+      defaultValue:''
+    }
 ];
 
 module.exports = notificationsConfig;

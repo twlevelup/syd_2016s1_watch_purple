@@ -4,5 +4,6 @@
 module.exports = {
   dummyNotification: require('../framework/watchNotification'),
   meetingRequestRecieve: require('../notifications/recieveMeetRequest'),
-  meetConfirmed: require('../notifications/meetConfirmed')
+  meetConfirmed: require('../notifications/meetConfirmed'),
+  meetRejected: require('../notifications/meetReject')
 };
