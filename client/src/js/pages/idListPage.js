@@ -13,7 +13,12 @@ var IdListScreen = Page.extend({
   buttonEvents: {
     top: 'scrollUp',
     bottom: 'scrollDown',
-    left: 'back'
+    left: 'back',
+    face: 'goToHomePage'
+  },
+
+  goToHomePage: function() {
+    window.App.navigate('');
   },
 
   scrollUp: function() {

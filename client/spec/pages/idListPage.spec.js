@@ -65,6 +65,15 @@ var IdListPage = require('../../src/js/pages/idListPage'),
           });
         });
 
+        describe('face', function() {
+          it('should navigate to home page', function() {
+            spyOn(window.App, 'navigate');
+            IdListPage.configureButtons();
+            eventHub.trigger('face');
+            expect(window.App.navigate).toHaveBeenCalledWith('');
+          });
+        });
+
       });
 
       describe('rendering', function() {
