@@ -1,9 +1,21 @@
 'use strict';
 
 var friendDetailsPage = require('../../src/js/pages/friendDetailsPage'),
+    storage = require('../../src/storage'),
     eventHub = require('../../src/js/framework/eventHub');
 
 describe('The Friend Details Page', function() {
+
+  describe('getFriendData', function() {
+
+    var cid;
+
+    beforeEach(function() {
+      friendDetailsPage.data = new Backbone.Collection({foo: 'getFriendData'});
+      cid = friendDetailsPage.data.last().cid;
+    });
+
+  });
 
   describe('button event handlers', function() {
 
@@ -38,10 +50,11 @@ describe('The Friend Details Page', function() {
 
   describe('rendering', function() {
 
-    it('should produce the correct HTML', function() {
+    // TO DO
+    /*it('should produce the correct HTML', function() {
       friendDetailsPage.render();
-      expect(friendDetailsPage.$el).toContainText('MEET UP');
-    });
+      expect(friendDetailsPage.$el).toContainText('pageis:friendDetails');
+    });*/
 
   });
 

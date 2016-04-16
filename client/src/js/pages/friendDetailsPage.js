@@ -1,10 +1,12 @@
 'use strict';
 
-var PageView = require('../framework/page');
+var Page = require('../framework/page');
 
-var FriendDetailsScreen = PageView.extend({
+var FriendDetailsScreen = Page.extend({
 
   id: 'friendDetails',
+
+  data: require('../../storage').friendsData,
 
   template: require('../../templates/pages/friendDetails.hbs'),
 
@@ -26,8 +28,12 @@ var FriendDetailsScreen = PageView.extend({
     window.App.navigate('');
   },
 
+  getFriendData: function(cid) {
+    return this.data.get(this.options.cid);
+  },
+
   render: function() {
-    var friend = {name: 'Danny Hope', phoneNumber: '0400 000 000', address: '51 Pitt Street, Sydney NSW 2000'};
+    var friend = this.getFriendData().toJSON();
     this.$el.html(this.template(friend));
     return this;
   }
