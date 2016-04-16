@@ -1,7 +1,8 @@
 'use strict';
 
 var notificationsConfig = [
-    {
+    //Dummy notification stuff below
+    /*{
       label: 'Go to contacts on right button',
       notificationType: 'dummyNotification',
       defaultValue: 'Click right button to go to contacts.'
@@ -14,7 +15,13 @@ var notificationsConfig = [
     {
       label: 'No default message!',
       notificationType: 'dummyNotification'
+    }*/
+    {
+      label:'Send Meet Request',
+      notificationType:'meetingRequestRecieve',
+      defaultValue:''
     }
+
 ];
 
 module.exports = notificationsConfig;
