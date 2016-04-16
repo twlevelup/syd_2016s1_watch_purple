@@ -14,10 +14,9 @@ describe('The id user list Page', function() {
     describe('right', function() {
       it('should take the user to the id list page', function() {
         spyOn(window.App, 'navigate');
-
         idUserListPage.configureButtons();
         eventHub.trigger('right');
-        expect(window.App.navigate).toHaveBeenCalledWith('idList/c1');
+        expect(window.App.navigate).toHaveBeenCalled();
       });
     });
 
@@ -35,7 +34,7 @@ describe('The id user list Page', function() {
   describe('rendering', function() {
     it('should produce the correct HTML', function() {
       idUserListPage.render();
-      expect(idUserListPage.$el).toContainHtml('Family Members');
+      expect(idUserListPage.$el).toContainHtml(idUserListPage);
     });
   });
 

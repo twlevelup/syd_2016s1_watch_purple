@@ -7,8 +7,6 @@ var IdUserListScreen = Menu.extend({
 
   id: 'idUserList',
 
-  template: require('../../templates/pages/idUserList.hbs'),
-
   buttonEvents: {
     right: 'select',
     left: 'goToHomePage',
@@ -17,13 +15,10 @@ var IdUserListScreen = Menu.extend({
   },
 
   getMenuItemLabel: function(menuItem) {
-    return menuItem.get('name');
+    return menuItem.get('names');
   },
 
   select: function() {
-    // TODO make the router a singleton?
-    // TODO move showPage in to the router, might be able to get rid of the activePage stuff too
-    // TODO include it at the top level instead of inside the app?
     window.App.navigate('idList/' + this.selected.cid);
   },
 
@@ -31,12 +26,7 @@ var IdUserListScreen = Menu.extend({
     window.App.navigate('');
   },
 
-  collection: storage.eventsData
-  //
-  // render: function() {
-  //   this.$el.html(this.template());
-  //   return this;
-  // }
+  collection: storage.idsData
 
 });
 

@@ -26,6 +26,10 @@ var Router = Backbone.Router.extend({
 
   showEventDetails: function(id) {
     window.App.showPage(this.pages.eventDetails, {cid: id});
+  },
+
+  showIdDetails: function(id) {
+    window.App.showPage(this.pages.idList, {cid: id});
   }
 
 });
