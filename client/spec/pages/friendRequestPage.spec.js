@@ -41,7 +41,7 @@ describe('The Friend Request Page', function() {
 
     it('should produce the correct HTML', function() {
       friendRequestPage.render();
-      expect(friendRequestPage.$el).toContainText('Friend Request');
+      expect(friendRequestPage.$el).toContainText('Meet Request');
     });
 
   });
