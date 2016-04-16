@@ -20,6 +20,12 @@ var notificationsConfig = [
       label:'Send Meet Request',
       notificationType:'meetingRequestRecieve',
       defaultValue:''
+    },
+
+    {
+      label:'Meeting Confirmed',
+      notificationType:'meetConfirmed',
+      defaultValue:''
     }
 
 ];
