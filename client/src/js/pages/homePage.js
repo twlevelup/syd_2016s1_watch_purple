@@ -21,7 +21,7 @@ var HomeScreen = PageView.extend({
   },
 
   goToServices: function() {
-    window.App.navigate('services');
+    window.App.navigate('servicesList');
   },
 
   goToIdUserlist: function() {

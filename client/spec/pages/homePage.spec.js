@@ -22,11 +22,11 @@ describe('The Home Page', function() {
     });
 
     describe('top', function() {
-      it('should take the user to the services page', function() {
+      it('should take the user to the services list page', function() {
         spyOn(window.App, 'navigate');
         homePage.configureButtons();
         eventHub.trigger('top');
-        expect(window.App.navigate).toHaveBeenCalledWith('services');
+        expect(window.App.navigate).toHaveBeenCalledWith('servicesList');
       });
     });
 

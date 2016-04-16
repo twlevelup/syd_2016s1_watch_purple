@@ -1,0 +1,13 @@
+{ "services": [
+    {"name": "RPA", 
+     "longName": "Royal Prince Alphred (RPA)", 
+     "address": "50 Pitt St, Maroubra",
+     "phone": "0434590348"
+    },
+    {"name": "St Vincents", 
+      "longName": "St Vincents", 
+      "address": "50 George St, Kingsford",
+      "phone": "0476590348"
+    }
+  ]
+}
