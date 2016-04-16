@@ -7,7 +7,6 @@ module.exports = {
   home: require('./homePage'),
   contacts: require('./contactsPage'),
   events: require('./eventsPage'),
-  idDetails: require('./idDetailsPage'),
   idList:  require('./idListPage'),
   idUserList:  require('./idUserListPage'),
   eventsList: require('./eventsList'),

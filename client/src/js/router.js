@@ -31,6 +31,11 @@ var Router = Backbone.Router.extend({
 
   showFriendsDetails: function(id) {
     window.App.showPage(this.pages.friendDetails, {cid: id});
+  },
+
+  showIdDetails: function(id) {
+    window.App.showPage(this.pages.idList, {cid: id});
+
   }
 
 });
