@@ -52,7 +52,7 @@ module.exports = function (config) {
       'type': 'text',
       'dir': 'coverage/',
       //comment this out if you want to see the output in the console
-      'file': 'coverageResult.txt',
+      //'file': 'coverageResult.txt',
       watermarks: {
         statements: [60, 90],
         functions: [60, 90],
