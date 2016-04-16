@@ -1,31 +1,39 @@
 'use strict';
 
-var PageView = require('../framework/page');
+var Menu = require('../framework/menu'),
+  storage = require('../../storage');
 
-var FriendsSelectionScreen = PageView.extend({
-
-  id: 'friendsSelection',
+var FriendsSelectionScreen = Menu.extend({
 
   template: require('../../templates/pages/friendsSelection.hbs'),
 
+  id: 'friendsSelection',
+
   buttonEvents: {
-    right: 'goToFriendDetailsPage',
-    left: 'goToHomePage',
-    face: 'goToHomePage'
+    right: 'select',
+    left: 'back',
+    //face: 'goToHomePage',
+    top: 'previous',
+    bottom: 'next'
   },
-
-  goToFriendDetailsPage: function() {
-    window.App.navigate('friendDetails');
-  },
-
+/*
   goToHomePage: function() {
     window.App.navigate('');
   },
+  */
 
-  render: function() {
-    this.$el.html(this.template());
-    return this;
-  }
+  getMenuItemLabel: function(menuItem) {
+    return menuItem.get('name');
+  },
+
+  select: function() {
+    // TODO make the router a singleton?
+    // TODO move showPage in to the router, might be able to get rid of the activePage stuff too
+    // TODO include it at the top level instead of inside the app?
+    window.App.navigate('friendDetails/' + this.selected.cid);
+  },
+
+  collection: storage.friendsData
 
 });
 

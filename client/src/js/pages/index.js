@@ -3,12 +3,12 @@
 // TODO autogenerate this file
 module.exports = {
   404: require('./404Page'),
+  meetingConfirmed: require('./meetingConfirmed'),
   home: require('./homePage'),
   contacts: require('./contactsPage'),
-  idDetails: require('./idDetailsPage'),
+  events: require('./eventsPage'),
   idList:  require('./idListPage'),
   idUserList:  require('./idUserListPage'),
-  events: require('./eventsPage'),
   eventsList: require('./eventsList'),
   eventDetails: require('./eventDetails'),
   about: require('./aboutPage'),

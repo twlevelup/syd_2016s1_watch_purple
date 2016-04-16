@@ -1,12 +1,12 @@
 'use strict';
 
-var Page = require('../framework/page');
+var PageView = require('../framework/page');
 
-var FourOhFour = Page.extend({
+var MeetingConfirmedSceen = PageView.extend({
 
-  id: 'contacts',
+  id: 'meetingConfirmed',
 
-  template: require('../../templates/pages/404.hbs'),
+  template: require('../../templates/pages/meetingConfirmed.hbs'),
 
   buttonEvents: {
     right: 'goToHome',
@@ -14,10 +14,6 @@ var FourOhFour = Page.extend({
     bottom: 'goToHome',
     left: 'goToHome',
     face: 'goToHome'
-  },
-
-  initialize: function() {
-    this.render();
   },
 
   goToHome: function() {
@@ -29,6 +25,7 @@ var FourOhFour = Page.extend({
     return this;
   }
 
+
 });
 
-module.exports = new FourOhFour();
+module.exports = new MeetingConfirmedSceen();

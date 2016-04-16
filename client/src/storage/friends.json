@@ -1,0 +1,22 @@
+{"friends": [
+  {
+    "name": "Maria Escu(F)",
+    "phoneNumber": "0412 345 678",
+    "address": "51 Pitt Street, Sydney NSW 2000"
+  },
+  {
+    "name": "Jue Huan(F)",
+    "phoneNumber": "0433 333 333",
+    "address": "51 Pitt Street, Sydney NSW 2000"
+  },
+  {
+    "name": "Jack Mack(M)",
+    "phoneNumber": "0456 456 456",
+    "address": "51 Pitt Street, Sydney NSW 2000"
+  },
+  {
+    "name": "Faridah Jo(F)",
+    "phoneNumber": "0490 909 090",
+    "address": "51 Pitt Street, Sydney NSW 2000"
+  }
+]}

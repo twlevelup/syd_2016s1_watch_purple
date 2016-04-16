@@ -10,16 +10,12 @@ var FriendRequestScreen = PageView.extend({
 
   buttonEvents: {
     right: 'goToHomePage',
-    left: 'goToFriendDetailsPage',
+    left: 'goToHomePage',
     face: 'goToHomePage'
   },
 
   goToHomePage: function() {
     window.App.navigate('');
-  },
-
-  goToFriendDetailsPage: function() {
-    window.App.navigate('friendDetails');
   },
 
   render: function() {
