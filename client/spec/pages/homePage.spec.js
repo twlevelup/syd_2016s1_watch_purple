@@ -31,12 +31,14 @@ describe('The Home Page', function() {
     });
 
     describe('bottom', function() {
-      it('should take the user to the id page', function() {
+
+      it('should take the user to the id userlist page', function() {
         spyOn(window.App, 'navigate');
         homePage.configureButtons();
         eventHub.trigger('bottom');
-        expect(window.App.navigate).toHaveBeenCalledWith('id');
+        expect(window.App.navigate).toHaveBeenCalledWith('idUserList');
       });
+
     });
 
     describe('left', function() {
@@ -61,10 +63,11 @@ describe('The Home Page', function() {
 
   describe('rendering', function() {
 
+    it('should display the homepage menu');
+
     it('returns the view object', function() {
       expect(homePage.render()).toEqual(homePage);
     });
-
   });
 
 });

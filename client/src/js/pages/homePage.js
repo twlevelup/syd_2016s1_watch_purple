@@ -11,7 +11,7 @@ var HomeScreen = PageView.extend({
   buttonEvents: {
     right: 'goToFriends',
     top: 'goToServices',
-    bottom: 'goToID',
+    bottom: 'goToIdUserlist',
     left: 'goToEvents',
     face: 'goToMe'
   },
@@ -21,13 +21,11 @@ var HomeScreen = PageView.extend({
   },
 
   goToServices: function() {
-    //$('#watch-face').animate({scrollTop: '-=70px'}); //old scroll code
     window.App.navigate('services');
   },
 
-  goToID: function() {
-    //$('#watch-face').animate({scrollTop: '+=70px'}); //old scroll code
-    window.App.navigate('id');
+  goToIdUserlist: function() {
+    window.App.navigate('idUserList');
   },
 
   goToEvents: function() {

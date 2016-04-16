@@ -23,6 +23,6 @@ dev:
   - concurrent:dev
 
 pre-commit:
-  - format
+  #- format
   - jshint
   - test
