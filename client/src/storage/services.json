@@ -1,5 +1,0 @@
-{"services": [
-  {"name": "HospitalAlpha","address": "123 Real Street, Suburb, Postcode","phone": "04 2565 9035", "distance": 8},
-  {"name": "HospitalBravo","address": "124 Fake Street, Suburb, Postcode","phone": "04 5565 9035", "distance": 10},
-  {"name": "ClinicCool","address": "123 Real Street, Suburb, Postcode","phone": "04 2565 9025", "distance": 12}
-]}
