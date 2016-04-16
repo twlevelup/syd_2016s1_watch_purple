@@ -16,34 +16,28 @@ describe('The Friends Selection Page', function() {
         spyOn(window.App, 'navigate');
         friendsSelectionPage.configureButtons();
         eventHub.trigger('right');
-        expect(window.App.navigate).toHaveBeenCalledWith('friendDetails');
+
+        expect(window.App.navigate).toHaveBeenCalledWith('friendDetails/c5');
+
       });
     });
 
     describe('left', function() {
       it('should navigate to home page', function() {
-        spyOn(window.App, 'navigate');
+        spyOn(friendsSelectionPage, 'back');
         friendsSelectionPage.configureButtons();
         eventHub.trigger('left');
-        expect(window.App.navigate).toHaveBeenCalledWith('');
+        expect(friendsSelectionPage.back).toHaveBeenCalled();
       });
     });
 
-    describe('face', function() {
-      it('should navigate to home page', function() {
-        spyOn(window.App, 'navigate');
-        friendsSelectionPage.configureButtons();
-        eventHub.trigger('face');
-        expect(window.App.navigate).toHaveBeenCalledWith('');
-      });
-    });
 
   });
 
   describe('rendering', function() {
     it('should produce the correct HTML', function() {
       friendsSelectionPage.render();
-      expect(friendsSelectionPage.$el).toContainText('List of Friends');
+      expect(friendsSelectionPage.$el).toContainText('List');
     });
 
     it('returns the view object', function() {
