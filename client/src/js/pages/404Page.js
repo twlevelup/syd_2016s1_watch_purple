@@ -8,8 +8,20 @@ var FourOhFour = Page.extend({
 
   template: require('../../templates/pages/404.hbs'),
 
+  buttonEvents: {
+    right: 'goToHome',
+    top: 'goToHome',
+    bottom: 'goToHome',
+    left: 'goToHome',
+    face: 'goToHome'
+  },
+
   initialize: function() {
     this.render();
+  },
+
+  goToHome: function() {
+    window.App.navigate('');
   },
 
   render: function() {
